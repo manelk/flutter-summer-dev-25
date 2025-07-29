@@ -15,13 +15,30 @@ class ApodDetailsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
-              print("ITEM: ${item.date}");
+    print("ITEM: ${item.date}");
 
     return Scaffold(
       body:
           // ApodWidgetEnhanced(apod: item)
-          Column(children: [Text(item.title), Text(item.explanation)]),
+          SafeArea(
+            child: Column(
+              children: [
+                TextButton(
+                  style: ButtonStyle(
+                    foregroundColor: WidgetStateProperty.all<Color>(
+                      Colors.blue,
+                    ),
+                  ),
+                  onPressed: () {
+                    print("hello");
+                  },
+                  child: Text('TextButton'),
+                ),
+                Text(item.title),
+                Text(item.explanation),
+              ],
+            ),
+          ),
     );
   }
 }
