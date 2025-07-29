@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:new_app_online_workshop/screens/apod_screen.dart';
 import 'package:new_app_online_workshop/screens/apod_screen_enhanced.dart';
 
 void main() {
