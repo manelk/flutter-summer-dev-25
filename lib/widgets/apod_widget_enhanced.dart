@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:new_app_online_workshop/models/apod_model.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class ApodWidgetEnhanced extends StatelessWidget {
   const ApodWidgetEnhanced({super.key, required this.apod});
@@ -33,11 +34,18 @@ class ApodWidgetEnhanced extends StatelessWidget {
                 children: [
                   Text(
                     apod.title ?? '',
-                    style: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
+                    style: GoogleFonts.alexBrush(
+                      textStyle: TextStyle(
+                        color: Colors.white,
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
+                    // TextStyle(
+                    //   color: Colors.white,
+                    //   fontSize: 18,
+                    //   fontWeight: FontWeight.bold,
+                    // ),
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                   ),
