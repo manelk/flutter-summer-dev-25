@@ -3,7 +3,7 @@ class ApodModel {
   final String url;
   final String explanation;
   final DateTime? date;
-  final String copyright;
+  final String? copyright;
 
   const ApodModel({
     this.title = "",
@@ -12,4 +12,14 @@ class ApodModel {
     this.date,
     this.copyright = "",
   });
+
+  factory ApodModel.fromJson(Map<String, dynamic> json) {
+    return ApodModel(
+      title: json['title'],
+      url: json['url'],
+      explanation: json['explanation'],
+      date: DateTime.tryParse(json['date']),
+      copyright: json['copyright'],
+    );
+  }
 }
